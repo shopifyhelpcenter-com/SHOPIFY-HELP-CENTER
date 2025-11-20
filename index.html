@@ -3,78 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopify Help Center</title>
+  <title>Help Center – Development Interface</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 100px 20px;
-      background-color: #7AB55C;
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: linear-gradient(135deg, #7AB55C, #5a9c45);
+      color: #ffffff;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      height: 100vh;
-      color: #fff;
-      position: relative;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-    .cta-button {
-      background-color: white;
-      color: #7AB55C;
-      padding: 15px 30px;
-      border: none;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      text-transform: uppercase;
-      transition: background-color 0.3s;
-      font-weight: bold;
-    }
-    .cta-button:hover {
-      background-color: #f1f1f1;
-    }
-    footer {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
+      align-items: center;
       text-align: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .hero-container {
+      max-width: 800px;
+      margin-top: 80px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      background-color: #ffffff;
+      color: #4e8f3b;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+      background-color: #f2f2f2;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 30px 0;
       font-size: 0.9rem;
-      color: #fff;
+      opacity: 0.9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <h2>Welcome to the Shopify Help Center</h2>
-  <p>This is a development-only interface. Chat with the test support widget below.</p>
-  
-  <button class="cta-button">Start Chat</button>
+  <div class="hero-container">
+    <h1>Welcome to the Help Center</h1>
+    <p>
+      This development environment is used to test support tools and live chat integrations.  
+      Launch the chat widget below to begin your support workflow.
+    </p>
 
-  <!--Start of Tawk.to Script-->
+    <button class="cta-button">
+      Start Chat
+    </button>
+  </div>
+
+  <!-- Tawk.to Widget -->
   <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/691cdacd052a7f19599f2e79/1jacbvppi';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/691cdacd052a7f19599f2e79/1jacbvppi';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
   </script>
-  <!--End of Tawk.to Script-->
 
   <footer>
-    © 2025 Shopify Help Center. All rights reserved.
+    © 2025 Help Center Development Interface. All rights reserved.
   </footer>
 
 </body>
