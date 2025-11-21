@@ -6,6 +6,8 @@
   <title>Help Center – Development Interface</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
     * {
       margin: 0;
       padding: 0;
@@ -14,63 +16,68 @@
 
     body {
       font-family: "Inter", Arial, sans-serif;
-      background: linear-gradient(135deg, #7AB55C, #5a9c45);
+      background: linear-gradient(135deg, #7AB55C, #4b8f37);
       color: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       min-height: 100vh;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
 
     .hero-container {
-      max-width: 800px;
-      margin-top: 80px;
-      animation: fadeIn 1.2s ease;
+      max-width: 850px;
+      margin-top: 50px;
+      animation: fadeIn 1s ease;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 700;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 1.2rem;
       opacity: 0.95;
-      margin-bottom: 40px;
-      line-height: 1.6;
+      margin-bottom: 45px;
+      line-height: 1.7;
     }
 
     .cta-button {
       background-color: #ffffff;
-      color: #4e8f3b;
-      padding: 15px 40px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 10px;
+      color: #3e7c2c;
+      padding: 17px 45px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 12px;
       border: none;
       cursor: pointer;
       transition: 0.25s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.18);
     }
 
     .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.28);
       background-color: #f2f2f2;
     }
 
     footer {
       margin-top: auto;
-      padding: 30px 0;
+      padding: 35px 0;
       font-size: 0.9rem;
       opacity: 0.9;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(25px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
@@ -78,27 +85,34 @@
 <body>
 
   <div class="hero-container">
-    <h1>Welcome to the Help Center</h1>
+    <h1>Welcome to the Shopify Help Center</h1>
     <p>
-      This development environment is used to test support tools and live chat integrations.  
+      This development environment is used as support tool and live-chat integration.  
       Launch the chat widget below to begin your support workflow.
     </p>
 
-    <button class="cta-button">
+    <button class="cta-button" onclick="openChat()">
       Start Chat
     </button>
   </div>
 
-  <!-- Tawk.to Widget -->
+  <!-- Tawk.to Script -->
   <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+
+    function openChat() {
+      if (Tawk_API && Tawk_API.maximize) {
+        Tawk_API.maximize();
+      }
+    }
+
     (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/691cdacd052a7f19599f2e79/1jacbvppi';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+      var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/691cdacd052a7f19599f2e79/1jacbvppi';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
     })();
   </script>
 
